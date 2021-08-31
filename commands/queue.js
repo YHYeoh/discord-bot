@@ -7,14 +7,14 @@ module.exports = {
         await interaction.deferReply();
         const queue = player.getQueue(interaction.guildId);
         if (!queue || !queue.playing) 
-        return void ctx.sendFollowUp({ 
+        return void ctx.followUp({ 
             content: "❌ | No music is being played!" 
         });
         const currentTrack = queue.current;
         const tracks = queue.tracks.slice(0, 10).map((m, i) => {
             return `${i + 1}. **${m.title}** ([link](${m.url}))`;
         });
-        return void interaction.sendFollowUp({
+        return void interaction.followUp({
             embeds: [
                 {
                     title: "Server Queue",
