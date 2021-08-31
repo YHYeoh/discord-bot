@@ -32,7 +32,7 @@ module.exports = {
     ],
     async execute(interaction, player){
         await interaction.deferReply();
-        const queue = player.getQueue(ctx.guildID);
+        const queue = player.getQueue(interaction.guildID);
         if (!queue || !queue.playing)
         return void interaction.followUp({
           content: '❌ | No music is being played!',
