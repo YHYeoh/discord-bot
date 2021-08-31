@@ -9,7 +9,7 @@ module.exports = {
             name:'mode',
             type: 10 ,// 'NUMBER' Type
             description: 'Seets loop mode',
-            required = true,
+            required: true,
             choices: [
                 {
                     name: "Off",
