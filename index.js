@@ -3,6 +3,7 @@ const Discord = require('discord.js');
 const Client = require('./client/Client');
 const {token} = require('./config.json');
 const {Player} = require('discord-player');
+//var SpotifyWebApi = require('spotify-web-api-node');
 
 const client = new Client();
 client.commands = new Discord.Collection();
