@@ -7,7 +7,7 @@ module.exports = {
         {
             name:'number',
             description:"Where you want to jump to?",
-            type: 3
+            type: 10
         }
     ],
     async execute(interaction, player){
