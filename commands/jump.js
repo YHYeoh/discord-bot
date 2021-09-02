@@ -7,8 +7,8 @@ module.exports = {
         {
             name:'number',
             description:"Where you want to jump to?",
-            type: 10,
-            required: true
+            required: true,
+            type: 10
         }
     ],
     async execute(interaction, player){
@@ -19,8 +19,8 @@ module.exports = {
         return void interaction.followUp({
           content: '❌ | No music is being played!',
         });
-        queue.jump(queue.tracks[tracksCount]);
+        queue.jump(queue.tracks[tracksCount+1]);
 
-        interaction.followUp({ content: `⏭ | Skipped ${tracksCount} tracks` });
+        interaction.followUp({ content: `⏭ | Skipped to tracks number ${tracksCount}` });
     }
 }
