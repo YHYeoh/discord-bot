@@ -15,12 +15,11 @@ module.exports = {
         await interaction.deferReply();
         const queue = player.getQueue(interaction.guildId);
         const tracksCount = interaction.options.get('number').value;
-        console.log(tracksCount);
         if (!queue || !queue.playing)
         return void interaction.followUp({
           content: '❌ | No music is being played!',
         });
-        queue.jump(player.tracks[tracksCount]);
+        queue.jump(queue.tracks[tracksCount]);
 
         interaction.followUp({ content: `⏭ | Skipped ${tracksCount} tracks` });
     }
