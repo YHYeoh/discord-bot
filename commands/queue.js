@@ -7,7 +7,7 @@ module.exports = {
         await interaction.deferReply();
         const queue = player.getQueue(interaction.guildId);
         if (!queue || !queue.playing) 
-        return void ctx.followUp({ 
+        return void interaction.followUp({ 
             content: "❌ | No music is being played!" 
         });
         const currentTrack = queue.current;

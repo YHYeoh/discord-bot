@@ -4,7 +4,7 @@ module.exports = {
     name:'bassboost',
     description: 'Bass Boooooooooooooooooooost',
     async execute(interaction, player){
-        const queue = client.player.getQueue(interaction.guild);
+        const queue = player.getQueue(interaction.guild);
         await interaction.deferReply();
         if (!queue || !queue.playing)
             return void interaction.followUp({
