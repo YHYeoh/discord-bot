@@ -1,7 +1,7 @@
 const {GuildMember} = require('discord.js');
 
 module.exports = {
-    name = 'jump',
+    name : 'jump',
     description = 'Jumps to specified track',
     options:[
         {
